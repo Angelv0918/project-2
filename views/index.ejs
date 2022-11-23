@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs') %>
+</head>
+
+<body>
+    <h1 class="display-1 text-center">Anime Universe</h1>
+    <div class="tableContainer container-md">
+        <table class="table table-bordered table-responsive table-striped">
+            <caption>List of Anime</caption>
+            <th>Name</th>
+            <th>Where to watch</th>
+            <th>image</th>
+            <%for (let i=0; i < anime.length; i++){ %>
+                <tr>
+                    <td class="h3">
+                        <a href="/anime/<%=anime[i]._id%>">
+                            <%=anime[i].name%>
+                        </a>
+                    </td>
+                    <td>
+                        <a href='<%=anime[i].url%>'><img src='/images/icons8-qr-code-64.png'</a>
+                    </td>
+                    <td>
+                        <img src='<%=anime[i].image%>' class="img-thumbnail">'
+                    </td>
+                </tr>
+                <% } %>
+        </table>
+    </div>
+        <div class="text-center"><a href="/anime/new"><button class="btn btn-primary col-6">Add a New Anime</button></a>
+    </div>
+</body>
+
+</html>

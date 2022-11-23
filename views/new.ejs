@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs') %>
+</head>
+
+<body>
+    <h1 class="text-center">Add a New Anime</h1>
+    <div class="container-sm">
+        <form action="/anime" method="POST">
+            <div class="form-group">
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" class="form-control"><br />
+            </div>
+            <div class="form-group">
+                <label for="url">Where to watch: </label>
+                <input type="text" name="url" id="url" class="form-control"><br />
+            </div>
+            <div class="form-group">
+                <label for="image">Image URL: </label>
+                <input type="text" name="image" id="image" class="form-control"><br />
+            </div>
+            <br />
+            <div class="text-center mt-4">
+                <input class="btn btn-primary col-6" type="submit" value="Submit New Anime">
+            </div>
+        </form>
+    </div>
+    <div class="text-center mt-4">
+        <a href="/anime"><button class="btn btn-primary col-4">Back</button></a>
+    </div>
+</body>
+
+</html>

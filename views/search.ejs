@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs') %>
+</head>
+
+<body>
+    <h1 class="display-1 text-center">Superhero Universe</h1>
+    <div class="tableContainer container-md">
+        <table class="table table-bordered table-responsive table-striped">
+            <caption>List of Anime</caption>
+            <th>Name</th>
+            <th>Watch</th>
+            <th>Picture</th>
+            <%for (let i=0; i < anime.length; i++){ %>
+                <tr>
+                    <td class="h3">
+                        <a href="/anime/<%=anime[i]._id%>">
+                            <%=anime[i].name%>
+                        </a>
+                    </td>
+                    <td>
+                        <%=anime[i].url%>
+                    </td>
+                    <td>
+                        <%=anime[i].image%>
+                    </td>
+                    
+                </tr>
+                <% } %>
+        </table>
+    </div>
+    <div class="text-center mt-4">
+        <a href="/anime"><button class="btn btn-primary col-4 mb-4">Back</button></a>
+    </div>
+    <div class="text-center"><a href="/anime/new"><button class="btn btn-primary col-6  mb-4">Add a New
+                Anime</button></a>
+    </div>
+</body>
+
+</html>
