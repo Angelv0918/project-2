@@ -3,7 +3,7 @@ const app = express();
 const { response, request } = require('express');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
-const Anime = require('./models/Schema.js');
+const Anime = require('./models/schema.js');
 
 let PORT = 3000;
 if(process.env.PORT){
