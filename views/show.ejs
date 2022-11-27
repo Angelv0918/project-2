@@ -9,7 +9,7 @@
     <h1 class="display-1 text-center">
         <%=anime.name%>
     </h1>
-    <div class="text-center"><a href="/anime/<%=anime._id%>/edit"><button class="btn btn-primary col-4">Edit This
+    <div class="text-center"><a href="/anime/<%=anime._id%>/edit"><button class="btn btn-success col-4">Edit This
                 anime</button></a></div>
     <div class="bg-image hover-zoom">
         <img src="<%=anime.image%>" alt="Picture of <%=anime.name%>"
@@ -32,7 +32,7 @@
     </div>
     <div class="text-center mt-4 mb-4">
         <form action="/anime/<%=anime._id%>?_method=DELETE" method="POST"><input class="btn btn-danger col-5"
-                type="submit" value="Delete This Anime">
+                type="submit" value="Delete">
         </form>
     </div>
     </form>

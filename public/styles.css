@@ -1,0 +1,26 @@
+.animePicture {
+    height: 50vh;
+    transition: transform .2s;
+}
+
+.animePicture:hover {
+    transform: scale(1.2);
+}
+img.img-thumbnail{
+    align-items: center;
+}
+
+h1 {
+    text-shadow: 2px 2px rgb(147, 187, 187);
+}
+
+.comic {
+    background-color: #3D5A80;
+    color: white;
+    box-shadow: 10px 10px 5px lightblue;
+}
+
+a {
+    text-decoration: none;
+}
+
