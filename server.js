@@ -24,7 +24,7 @@ app.get('/anime/new', (request, response) => {
     })
 })
 
-//where the new hero gets sent to - post address
+
 app.post('/anime', (request, response) => {
     console.log(request.body);
     Anime.create(request.body, (error, inputObject) => {
